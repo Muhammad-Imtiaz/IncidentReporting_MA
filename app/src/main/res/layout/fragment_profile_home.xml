@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <FrameLayout
+            android:id="@+id/framelayout_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:id="@+id/profile_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/constraintLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:cardBackgroundColor="@color/colorSplashScreen"
+                    app:cardElevation="5dp">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/thumbnail_profile"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_profile_thumbnail"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <android.support.design.widget.FloatingActionButton
+                            android:id="@+id/fb_profile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:src="@drawable/ic_floating_action"
+                            app:elevation="3dp"
+                            app:fabSize="mini"
+                            app:layout_constraintBottom_toBottomOf="@+id/thumbnail_profile"
+                            app:layout_constraintEnd_toEndOf="@+id/thumbnail_profile"
+                            app:layout_constraintHorizontal_bias="1.0"
+                            app:layout_constraintStart_toStartOf="@+id/thumbnail_profile"
+                            app:layout_constraintTop_toTopOf="@+id/thumbnail_profile"
+                            app:layout_constraintVertical_bias="0.927" />
+                    </android.support.constraint.ConstraintLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/name_cardlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_below="@id/constraintLayout"
+                    android:layout_marginTop="30dp"
+                    app:cardElevation="3dp">
+
+                    <TextView
+                        android:id="@+id/nameTV_profile"
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="left|center_vertical|start"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:hint="@string/muhammad_imtiaz"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/editNameBtn_Profile"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginRight="5dp"
+                        android:drawableLeft="@drawable/ic_edit_post"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp" />
+
+
+                </android.support.v7.widget.CardView>
+
+                <TextView
+                    android:id="@+id/profile_guideline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/name_cardlayout"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:padding="10dp"
+                    android:text="@string/profile_guideline" />
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/phone_cardlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_below="@id/profile_guideline"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    app:cardElevation="3dp">
+
+                    <TextView
+                        android:id="@+id/emailTV_profile"
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical|start"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical"
+                        android:hint="@string/email_signIn"
+                        android:textSize="18dp"
+                        android:textStyle="normal" />
+
+                    <Button
+                        android:id="@+id/editEmailBtn_Profile"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginRight="5dp"
+                        android:drawableLeft="@drawable/ic_edit_post"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp" />
+
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/about_cardlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_below="@id/phone_cardlayout"
+                    app:cardElevation="3dp">
+
+                    <TextView
+                        android:id="@+id/aboutTV_profile"
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="left|start"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/status"
+                        android:textSize="18dp" />
+
+                    <Button
+                        android:id="@+id/editAboutBtn_Profile"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginRight="5dp"
+                        android:drawableLeft="@drawable/ic_edit_post"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp" />
+
+
+                </android.support.v7.widget.CardView>
+
+
+            </RelativeLayout>
+        </FrameLayout>
+    </android.support.constraint.ConstraintLayout>
+
+
+</ScrollView>

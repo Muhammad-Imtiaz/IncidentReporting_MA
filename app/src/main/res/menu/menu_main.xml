@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+       android:id="@+id/setting_item"
+        android:title="Settings"/>
+
+    <item
+        android:id="@+id/logout_item"
+        android:title="Log Out" />
+    <item
+        android:title=""
+        android:id="@+id/search_item"
+        android:icon="@drawable/ic_search_item"
+        app:actionViewClass="android.widget.SearchView"
+        app:showAsAction="ifRoom" />
+
+</menu>
